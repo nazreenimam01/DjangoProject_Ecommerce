@@ -1,0 +1,249 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">pt>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'projectfinal.css' %}">
+    <title>CycleHub </title>
+</head>
+
+<body>
+    <nav id="nav">
+        <div class="navTop">
+            <div class="navItem">
+                <span class="signboard"> <br> <img src="{% static 'cyclehub.jpg' %}" width="85" height="85" alt="" class="icon"></span>
+            </div>
+            <div class="navItem">
+                <div class="search">
+                    <input type="text" placeholder="Search..." class="searchInput">
+                    <img src="{% static 'search.png' %}" width="20" height="20" alt="" class="searchIcon">
+                </div>
+            </div>
+            
+            <div class="navItem">
+                <a href="{% url 'login' %}"> <button type="button" class="btn btn-outline-secondary">Login</button> </a>
+                <a href="{% url 'signup' %}"> <button type="button" class="btn btn-outline-secondary">Sign Up</button>  </a>
+            </div>
+        </div>
+        <div class="navBottom">
+            <h3 class="menuItem">PEN STAND</h3>
+            <h3 class="menuItem">FLOWER VASE</h3>
+            <h3 class="menuItem">BAGS</h3>
+            <h3 class="menuItem">FANCY CHAIR</h3>
+            <h3 class="menuItem">TABLE LAMP</h3>
+        </div>
+    </nav>
+    <div class="slider">
+        <div class="sliderWrapper">
+            <div class="sliderItem">
+                <img src="{% static 'penstand.jpg' %}" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">PEN STAND</br> </h1>
+                <h2 class="sliderPrice">Rs 199</h2>
+                <a href="#product">
+                    <button class="buyButton">BUY NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="{% static 'flowervass.jpg' %}" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">FLOWER VASE</br> </h1>
+                <h2 class="sliderPrice">Rs 499</h2>
+                <a href="#product">
+                    <button class="buyButton">BUY NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="{% static 'paperbags.jpg' %}" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">BAGS</br> </h1>
+                <h2 class="sliderPrice">Rs 99 each</h2>
+                <a href="#product">
+                    <button class="buyButton">BUY NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="{% static 'fancychair.jpg' %}" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">FANCY CHAIR</br> </h1>
+                <h2 class="sliderPrice"> Rs 1499</h2>
+                <a href="#product">
+                    <button class="buyButton">BUY NOW!</button>
+                </a>
+            </div>
+            <div class="sliderItem">
+                <img src="{% static 'tablelamp.jpg' %}" alt="" class="sliderImg">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">TABLE LAMP</br> </h1>
+                <h2 class="sliderPrice">Rs 699</h2>
+                <a href="#product">
+                    <button class="buyButton">BUY NOW!</button>
+                </a>
+            </div>
+        </div>
+    </div>
+   
+    <div class="features">
+        <div class="feature">
+            <img src="{% static 'shipping.png' %}" alt="" class="featureIcon">
+            <span class="featureTitle">Free shipping on orders over Rs 1000</span>
+            <span class="featureDesc">Free worldwide shipping on all orders.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="{% static 'return.png' %}" alt="">
+            <span class="featureTitle">7 DAYS RETURN</span>
+            <span class="featureDesc">No-questions-asked return and easy refund in 7 days.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="{% static 'gift.png' %}" alt="">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDesc">Buy gift cards and use coupon codes easily.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="{% static 'contact.png' %}" alt="">
+            <span class="featureTitle">CONTACT US!</span>
+            <span class="featureDesc">Keep in touch via email and support system.</span>
+        </div>
+    </div>
+
+    <div class="product" id="product">
+        <img src="{% static 'penstand.jpg' %}" alt="" class="productImg">
+        <div class="productDetails">
+            <h1 class="productTitle">PEN STAND</h1>
+            <h2 class="productPrice"> Rs 199</h2>
+            <p class="productDescription">
+                Our recyclable pen stand is a testament to sustainable design and eco-conscious living. Made from 100% recycled materials, each pen stand is crafted through a meticulous process that transforms discarded plastics and paper into a stylish and functional desk accessory. The materials are cleaned, processed, and molded into a sleek shape that not only holds your pens and pencils but also adds a touch of elegance to your workspace. By opting for products made from recycled materials, you help reduce landfill waste and conserve natural resources. <br>Make a responsible choice today and support a greener future with our recyclable pen stand!
+            </p>
+            <div class="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            <div class="sizes">
+                <div class="size">Big</div>
+                <div class="size">Medium</div>
+                <div class="size">Small</div>
+            </div>
+            
+            <a href="{% url 'cart' %}"> <button class="productButton" onclick="addToCart('{productTitle}', '{productPrice}')">ADD TO CART</button> </a>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="galleryItem">
+            <h1 class="galleryTitle">Eco Essentials</h1>
+            <img src="{% static 'penstandnewww.jpg' %}"
+                alt="" class="galleryImg">
+        </div>
+        
+        <div class="galleryItem">
+            <img src="{% static 'vaseneww.jpg' %}"
+                alt="" class="galleryImg">
+            <h1 class="galleryTitle">Choose Wisely, Live Sustainably!</h1>
+        </div>
+        <div class="galleryItem">
+            <h1 class="galleryTitle">Redefine Your Lifestyle</h1>
+            <img src="{% static 'lamplamplamp.jpg' %}"
+                alt="" class="galleryImg">    
+        </div>
+    </div>
+    <div class="newSeason">
+        <div class="nsItem">
+            <img src="{% static 'cyclehub78776.jpg' %}"
+                alt="" class="nsImg">
+        </div>
+        <div class="nsItem">
+            <h3 class="nsTitleSm">NEW SEASONAL PRODUCTS</h3>
+            <h1 class="nsTitle">New Arrivals</h1>
+            <h1 class="nsTitle">New Collection</h1>
+            <a href="#nav">
+                <button class="nsButton">CHOOSE YOUR PRODUCTS</button>
+            </a>
+        </div>
+        <div class="nsItem">
+            <img src="{% static 'allitems.jpg' %}"
+                alt="" class="nsImg">
+        </div>
+    </div>
+    <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">About Us</h1>
+                <ul class="fList">
+                    <li class="fListItem">Company</li>
+                    <li class="fListItem">Contact</li>
+                    <li class="fListItem">Careers</li>
+                    <li class="fListItem">Affiliates</li>
+                    <li class="fListItem">Stores</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Useful Links</h1>
+                <ul class="fList">
+                    <li class="fListItem">Support</li>
+                    <li class="fListItem">Refund</li>
+                    <li class="fListItem">FAQ</li>
+                    <li class="fListItem">Feedback</li>
+                    <li class="fListItem">Stories</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Products</h1>
+                <ul class="fList">
+                    <li class="fListItem">PEN STAND</li>
+                    <li class="fListItem">FLOWER VASE</li>
+                    <li class="fListItem">BAGS</li>
+                    <li class="fListItem">FANCY CHAIR</li>
+                    <li class="fListItem">TABLE LAMP</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
+                <div class="fMail">
+                    <input type="text" placeholder="cyclehub@gmail.com" class="fInput">
+                    <button class="fButton">Join!</button>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+    </footer>
+    <div>
+        
+            <h1>Follow Us</h1>
+            
+            <div>
+            
+                <br>
+                 
+    <section class="contact" id="contact">
+    <h1>Contact Us</h1>
+    <div>
+    <div class="handles" style="text-align: center;">
+    
+                                <a href="https://www.facebook.com/share/1ATaiaDnzd/" target="_blank"><i class="bi bi-facebook" class="icon"></i>Facebook</a><br>
+                                <a href="https://www.instagram.com/cyclehub_04?igsh=MWg4czZ0M2ZpaHJkcw==" target="_blank"><i class="bi bi-instagram" class="icon"></i>Instagram</a><br>
+                                
+                                </div>
+                                
+                                </div>
+                                <div class="footerRightMenu">
+                                  <b>  <span class="copyright">CycleHub. All rights reserved. 2025.</span></b>
+                                </div>
+                       </section>    
+                       <br>
+            </div>
+        </div>
+        <script src="{% static 'projectfinal.js' %}"></script>
+        
+</body>
+    
+</html>

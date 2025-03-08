@@ -1,0 +1,16 @@
+body {
+    background-color: aliceblue;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.btn-remove {
+    background-color: red;
+    color: white;
+}

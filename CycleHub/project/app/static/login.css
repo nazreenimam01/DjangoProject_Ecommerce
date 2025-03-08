@@ -1,0 +1,29 @@
+body {
+    background: url("https://images.unsplash.com/photo-1740094714220-1b0c181be46d?q=80&w=883&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: gainsboro;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: gainsboro;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.btn-primary {
+    background-color: grey;
+    border-color: grey;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
